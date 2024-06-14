@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Redirector</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <h1>Search Redirector</h1>
+    <p>This extension redirects searches based on keywords.</p>
+
+    <!-- Simple table to display the search engines -->
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Suffixes</th>
+          <th>URL</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="search-engines">
+        <!-- Populate the table with the search engines -->
+      </tbody>
+    </table>
+
+    <h2>Add New Redirect</h2>
+    <form id="add-redirect-form">
+      <input type="text" id="name" placeholder="Name" required />
+      <input
+        type="text"
+        id="suffixes"
+        placeholder="Suffixes (comma separated)"
+        required
+      />
+      <input type="url" id="url" placeholder="URL" required />
+      <button type="submit">Add Redirect</button>
+    </form>
+
+    <h2>Import Redirects</h2>
+    <input type="file" id="import-file" accept=".json" />
+    <button id="import-button">Import JSON</button>
+    <p id="import-error" style="color: red; display: none"></p>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

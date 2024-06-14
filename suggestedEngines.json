@@ -1,0 +1,42 @@
+[
+  {
+    "name": "YouTube",
+    "suffixes": ["yt", "y"],
+    "url": "https://www.youtube.com/results?search_query="
+  },
+  {
+    "name": "DuckDuckGo",
+    "suffixes": ["ddg", "duck", "dgo"],
+    "url": "https://duckduckgo.com/?q="
+  },
+  {
+    "name": "Reddit",
+    "suffixes": ["rdt", "reddit"],
+    "url": "https://www.reddit.com/search/?q="
+  },
+  {
+    "name": "Wikipedia",
+    "suffixes": ["wki", "wiki", "wp"],
+    "url": "https://en.wikipedia.org/wiki/Special:Search?search="
+  },
+  {
+    "name": "Twitter",
+    "suffixes": ["x", "twt"],
+    "url": "https://twitter.com/search?q="
+  },
+  {
+    "name": "GitHub",
+    "suffixes": ["gh", "git"],
+    "url": "https://github.com/search?q="
+  },
+  {
+    "name": "Stack Overflow",
+    "suffixes": ["so", "stack", "stck"],
+    "url": "https://stackoverflow.com/search?q="
+  },
+  {
+    "name": "Amazon",
+    "suffixes": ["amz", "amazon", "azn"],
+    "url": "https://www.amazon.com.au/s?k="
+  }
+]

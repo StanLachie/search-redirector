@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Search Redirector",
+  "version": "1.0",
+  "description": "This extension redirects searches based on keywords.",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": ["webNavigation", "tabs", "storage"]
+}
