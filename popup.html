@@ -38,9 +38,14 @@
       <button type="submit">Add Redirect</button>
     </form>
 
-    <h2>Import Redirects</h2>
-    <input type="file" id="import-file" accept=".json" />
-    <button id="import-button">Import JSON</button>
+    <h2>Import/Export Redirects</h2>
+    <div id="input-wrapper">
+      <input type="file" id="import-file" accept=".json" />
+      <div id="import-btn-wrapper">
+        <button id="import-button">Import JSON</button>
+        <button id="export-button">Export JSON</button>
+      </div>
+    </div>
     <p id="import-error" style="color: red; display: none"></p>
 
     <script src="popup.js"></script>

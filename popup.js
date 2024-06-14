@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("add-redirect-form");
   const importButton = document.getElementById("import-button");
   const importFile = document.getElementById("import-file");
+  const exportButton = document.getElementById("export-button");
   const importError = document.getElementById("import-error");
 
   function populateTable(searchEngines) {
@@ -126,6 +127,23 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     reader.readAsText(file);
+  });
+
+  exportButton.addEventListener("click", () => {
+    chrome.storage.local.get("searchEngines", (data) => {
+      const searchEngines = data.searchEngines || [];
+      const blob = new Blob([JSON.stringify(searchEngines, null, 2)], {
+        type: "application/json",
+      });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "searchEngines.json";
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    });
   });
 
   loadSearchEngines();
